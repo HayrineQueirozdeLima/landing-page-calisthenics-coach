@@ -1,0 +1,50 @@
+/* ======================================================
+   SERVIÇOS — cards de oferta
+   ====================================================== */
+
+.servicos{ border-top:1px solid var(--line); background:var(--bg-panel); }
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:48px;
+}
+@media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
+
+.card{
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:4px;
+  overflow:hidden;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.card:hover{ border-color:var(--orange-dim); transform:translateY(-4px); }
+
+.card-media{
+  aspect-ratio: 16 / 10;
+  overflow:hidden;
+}
+.card-media img{
+  width:100%; height:100%;
+  object-fit:cover;
+  transition: filter .3s ease;
+}
+.card:hover .card-media img{ filter: grayscale(0%) contrast(1.12) saturate(1.15); }
+
+.card-body{ padding:28px 32px 32px; }
+
+.card .num{
+  font-family:'JetBrains Mono', monospace;
+  color:var(--orange);
+  font-size:13px;
+  margin-bottom:18px;
+  display:block;
+}
+.card h3{
+  font-family:'Work Sans', sans-serif;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+.card p{ color:var(--ink-muted); font-size:14.5px; margin-bottom:0; }

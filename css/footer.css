@@ -1,0 +1,42 @@
+/* ======================================================
+   FOOTER 
+   ====================================================== */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+}
+
+.foot-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.foot-grid .brand {
+  font-size: 18px;
+}
+
+.foot-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+.foot-links a {
+  text-decoration: none;
+}
+.foot-links a:hover {
+  color: var(--orange-light);
+}
+
+.copy {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin-top: 20px;
+  font-family: "JetBrains Mono", monospace;
+}
