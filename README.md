@@ -1,4 +1,4 @@
-# Antônio Souza Neto — Consultoria de Calistenia e Musculação
+# Consultoria de Calistenia e Musculação
 
 Landing page estática (HTML + CSS + JS puro) para consultoria de calistenia, com avaliação técnica baseada em escala de progressão.
 
