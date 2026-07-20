@@ -1,0 +1,89 @@
+/* ======================================================
+   CONTATO — informações e formulário
+   ====================================================== */
+
+.contato{ border-top:1px solid var(--line); background:var(--bg-panel); }
+
+.contato-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:56px;
+}
+@media (max-width:900px){ .contato-grid{ grid-template-columns:1fr; } }
+
+.contato-info p{ color:var(--ink-muted); }
+
+.info-row{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  margin-top:22px;
+  font-size:14.5px;
+}
+.info-row img{ width:18px; height:18px; margin-top:2px; flex-shrink:0; }
+.info-row .k{
+  color:var(--ink-muted);
+  width:78px;
+  flex-shrink:0;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  padding-top:2px;
+}
+
+form{
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:32px;
+}
+
+.field{ margin-bottom:20px; }
+.field label{
+  display:block;
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--ink-muted);
+  margin-bottom:8px;
+  font-family:'JetBrains Mono', monospace;
+}
+
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:520px){ .field-row{ grid-template-columns:1fr; } }
+
+input, textarea{
+  width:100%;
+  background:var(--bg-panel-2);
+  border:1px solid var(--line);
+  color:var(--ink);
+  padding:13px 14px;
+  border-radius:2px;
+  font-family:'Work Sans', sans-serif;
+  font-size:14.5px;
+  transition:border-color .2s ease;
+}
+input:focus, textarea:focus{
+  outline:none;
+  border-color:var(--orange);
+}
+textarea{ resize:vertical; min-height:110px; }
+
+.cep-hint{ font-size:12px; color:var(--ink-muted); margin-top:6px; min-height:16px; }
+.cep-hint.err{ color:#e5654a; }
+.cep-hint.ok{ color:var(--orange-light); }
+
+.field.readonly-pair{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+.thanks{
+  display:none;
+  border:1px solid var(--orange-dim);
+  background:rgba(242,102,26,0.08);
+  border-radius:4px;
+  padding:22px;
+  margin-top:18px;
+}
+.thanks.show{ display:block; }
+.thanks b{ color:var(--orange-light); display:block; margin-bottom:4px; }
+.thanks span{ color:var(--ink-muted); font-size:14px; }

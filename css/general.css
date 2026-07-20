@@ -1,0 +1,113 @@
+/* ======================================================
+   GERAL — tokens, reset, tipografia, componentes de base
+   ====================================================== */
+
+:root{
+  --bg: #0b0b0c;
+  --bg-panel: #151517;
+  --bg-panel-2: #1c1c1f;
+  --line: #2a2a2d;
+  --ink: #f3f1ec;
+  --ink-muted: #9a9a9e;
+  --orange: #f2661a;
+  --orange-light: #ffa257;
+  --orange-dim: #6b3417;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Work Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1, h2, h3{
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:0.02em;
+  line-height:1;
+  margin:0;
+}
+
+.mono{ font-family:'JetBrains Mono', monospace; }
+a{ color:inherit; }
+img{ max-width:100%; display:block; }
+
+.wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+
+section{ padding:96px 0; }
+@media (max-width:640px){ section{ padding:64px 0; } }
+
+.section-kicker{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--orange);
+  margin-bottom:14px;
+  display:block;
+}
+
+.section-title{ font-size:clamp(30px, 4vw, 44px); margin-bottom:16px; }
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--orange);
+  color:#0b0b0c;
+  font-weight:700;
+  font-size:15px;
+  padding:16px 30px;
+  border:none;
+  border-radius:2px;
+  cursor:pointer;
+  text-decoration:none;
+  transition:background .2s ease, transform .2s ease;
+}
+.btn:hover{ background:var(--orange-light); transform:translateY(-2px); }
+
+.btn-ghost{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--line);
+}
+.btn-ghost:hover{ border-color:var(--orange); background:transparent; transform:none; }
+
+/* ---------- elemento de assinatura: escala de progressão ---------- */
+.scale{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  width:100%;
+}
+.scale .tick{
+  height:4px;
+  flex:1;
+  background:var(--line);
+  border-radius:2px;
+  position:relative;
+}
+.scale .tick.on{ background:var(--orange); }
+
+.scale-label{
+  display:flex;
+  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink-muted);
+  margin-top:8px;
+}
+
+/* ---------- tratamento fotográfico padrão da marca ---------- */
+.brand-photo{
+  filter: grayscale(15%) contrast(1.08) saturate(1.05);
+}
